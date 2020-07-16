@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>calc</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <link rel="stylesheet" type="text/css" href="calc.css">
+     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+
+</head>
+<body>
+	
+    <h1>Calculator</h1>
+    <main>
+    	<form name="form">
+          <input type="textview" name="view" id="enter" autofocus>
+    	</form>
+
+    <div class="buttons">
+         <section>
+         	<input type="button" class="button" value="C" onclick="document.form.view.value=''">
+         	<input type="button" class="button" value="%" onclick="insert('%')">
+         	<input type="button" class="button" value="&times;" onclick="back()">
+         	<input type="button" class="button" value="/" onclick="insert('/')">
+         </section>
+          <section>
+         	<input type="button" class="button" value="7" onclick="insert(7)">
+         	<input type="button" class="button" value="8" onclick="insert(8)">
+         	<input type="button" class="button" value="9" onclick="insert(9)">
+         	<input type="button" class="button" value="x" onclick="insert('*')">
+         </section>
+         <section>
+         	<input type="button" class="button" value="4" onclick="insert(4)">
+         	<input type="button" class="button" value="5" onclick="insert(5)">
+         	<input type="button" class="button" value="6" onclick="insert(6)">
+         	<input type="button" class="button" value="-" onclick="insert('-')">
+         </section>
+          <section>
+         	<input type="button" class="button" value="1" onclick="insert(1)">
+         	<input type="button" class="button" value="2" onclick="insert(2)">
+         	<input type="button" class="button" value="3" onclick="insert(3)">
+         	<input type="button" class="button" value="+" onclick="insert('+')">
+         </section>
+         <section>
+         	<input type="button" class="button" value="0" onclick="insert(0)">
+         	<input type="button" class="button" value="00" onclick="insert(0)">
+         	<input type="button" class="button" value="." onclick="insert('.')">
+         	<input type="button" class="button" value="=" onclick="equal()">
+         </section>
+    </div>
+    </main>
+    <script type="text/javascript">
+    	   function insert(num){
+    	   	var press=document.getElementById("enter");
+            press.value=document.getElementById("enter").value+num;
+    	    }
+            
+            function equal(){
+            		var equiv=document.getElementById("enter").value;
+            		//if(equiv){
+            	      document.getElementById("enter").value=eval(equiv);
+            	   //   }
+            	}
+
+            function back(){
+            	  var bck=document.getElementById("enter").value;
+            	   document.getElementById("enter").value=bck.substr(0,bck.length-1);
+            }
+    </script>
+
+</body>
+</html>
