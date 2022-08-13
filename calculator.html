@@ -1,15 +1,12 @@
-<!DOCTYPE html>
 <html>
 <head>
-	<title>calc</title>
+	<title>Calculator</title>
 	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
     <link rel="stylesheet" type="text/css" href="calc.css">
      <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
-
 </head>
 <body>
-	
     <h1>Calculator</h1>
     <main>
     	<form name="form">
@@ -49,24 +46,5 @@
          </section>
     </div>
     </main>
-    <script type="text/javascript">
-    	   function insert(num){
-    	   	var press=document.getElementById("enter");
-            press.value=document.getElementById("enter").value+num;
-    	    }
-            
-            function equal(){
-            		var equiv=document.getElementById("enter").value;
-            		//if(equiv){
-            	      document.getElementById("enter").value=eval(equiv);
-            	   //   }
-            	}
-
-            function back(){
-            	  var bck=document.getElementById("enter").value;
-            	   document.getElementById("enter").value=bck.substr(0,bck.length-1);
-            }
-    </script>
-
-</body>
+  </body>
 </html>
